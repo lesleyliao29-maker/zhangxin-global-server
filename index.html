@@ -27,6 +27,14 @@
 
     <main>
       <section id="screen-home" class="screen active">
+        <div class="mobile-design-cover" aria-label="张鑫国际服首页视觉定稿">
+          <img src="design-home.webp" alt="张鑫国际服首页视觉定稿" />
+          <button class="cover-hotspot cover-start" id="coverStartBtn" aria-label="进入国际服"></button>
+          <button class="cover-hotspot cover-learn" data-action="vocab" aria-label="学英语"></button>
+          <button class="cover-hotspot cover-level" data-action="scene" aria-label="闯关升级"></button>
+          <button class="cover-hotspot cover-explore" data-nav="map" aria-label="探索世界"></button>
+          <button class="cover-hotspot cover-self" data-nav="profile" aria-label="成为更好的自己"></button>
+        </div>
         <div class="hero">
           <div class="hero-copy">
             <div class="eyebrow">GOOD ENGLISH · BRIGHTER LIFE · A BIGGER YOU</div>
@@ -98,7 +106,7 @@
               <button class="style-pill">可爱活泼</button>
               <button class="style-pill">简约高级</button>
             </div>
-            <button class="primary big" id="createIdentity">确定，开启我的国际服 →</button>
+            <button class="primary big" id="createIdentity">生成我的国际服护照 →</button>
             <div class="hand-note">一个新的名字，<br>一个更大的自己。</div>
           </div>
         </div>
@@ -121,6 +129,10 @@
               <small>TO</small><p>A Bigger World</p>
               <small>SIGNATURE</small><div class="signature" id="passportSignature">—</div>
             </div>
+          </div>
+          <div class="passport-next">
+            <button class="primary big" data-nav="map">护照已生成，开始第一站 →</button>
+            <button class="secondary" data-action="vocab">先学 10 个出国实用词</button>
           </div>
           <div class="stamp-wall" id="stampWall"></div>
         </div>

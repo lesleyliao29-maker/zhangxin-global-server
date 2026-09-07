@@ -90,3 +90,27 @@ h1{font-size:clamp(54px,6vw,95px);line-height:.96;margin:24px 0 18px;letter-spac
 .task p{color:#687396}
 .phrase p{margin:10px 0 0}
 .page-title,.learn-head{padding-top:6px}
+
+
+/* V2: mobile homepage uses the approved visual draft itself, with real clickable hotspots. */
+.mobile-design-cover{display:none;position:relative;overflow:hidden;background:#dff5ff}
+.mobile-design-cover>img{display:block;width:100%;height:auto}
+.cover-hotspot{position:absolute;border:0;background:transparent;z-index:5;border-radius:999px;-webkit-tap-highlight-color:transparent}
+.cover-start{left:25%;top:75.5%;width:50%;height:8%}
+.cover-learn{left:5%;top:87%;width:22%;height:10%}
+.cover-level{left:28%;top:87%;width:22%;height:10%}
+.cover-explore{left:51%;top:87%;width:22%;height:10%}
+.cover-self{left:74%;top:87%;width:22%;height:10%}
+.passport-next{grid-column:1/-1;display:flex;justify-content:center;gap:12px;flex-wrap:wrap;padding:10px 0 2px}
+.passport-next .primary{min-width:260px}
+.vocab-level-note{font-size:12px;color:#7d86a4;margin-top:10px}
+@media(max-width:700px){
+  body:has(#screen-home.active) .topbar{display:none}
+  body:has(#screen-home.active) main{padding:0 0 48px;max-width:none}
+  #screen-home.active .mobile-design-cover{display:block}
+  #screen-home.active .hero{display:none}
+  #screen-home.active .module-row,#screen-home.active .world-preview{margin-left:14px;margin-right:14px}
+  .onboard-card #createIdentity{position:sticky;bottom:calc(10px + env(safe-area-inset-bottom));z-index:8;width:100%;box-shadow:0 14px 32px rgba(255,105,170,.35)}
+  .passport-next{position:sticky;bottom:calc(10px + env(safe-area-inset-bottom));z-index:7;background:rgba(255,255,255,.86);backdrop-filter:blur(12px);padding:12px;border-radius:20px}
+  .passport-next .primary,.passport-next .secondary{width:100%}
+}
