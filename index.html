@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#ffd8ec" />
+  <title>张鑫国际服 · ZHANG XIN GLOBAL SERVER</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+    <header class="topbar">
+      <button class="brand" data-nav="home" aria-label="回到首页">
+        <span class="brand-plane">✈</span>
+        <span><strong>张鑫国际服</strong><small>ZHANG XIN · GLOBAL SERVER</small></span>
+      </button>
+      <nav>
+        <button class="nav-btn active" data-nav="home">🏠 首页</button>
+        <button class="nav-btn" data-nav="map">🗺️ 学习地图</button>
+        <button class="nav-btn" data-nav="tasks">📋 每日任务</button>
+        <button class="nav-btn" data-nav="passport">🛂 我的护照</button>
+        <button class="nav-btn" data-nav="designs">🎨 设计稿</button>
+        <button class="nav-btn" data-nav="review">🧠 错词复习</button>
+      </nav>
+      <button class="round-btn" data-nav="profile" aria-label="个人中心">👤</button>
+    </header>
+
+    <main>
+      <section id="screen-home" class="screen active">
+        <div class="hero">
+          <div class="hero-copy">
+            <div class="eyebrow">GOOD ENGLISH · BRIGHTER LIFE · A BIGGER YOU</div>
+            <h1>学会英语，<br><span>去过更大的生活。</span></h1>
+            <p id="welcomeText">从零开始，把英语一点点装进你的国际服。</p>
+            <div class="hero-actions">
+              <button class="primary big" id="startBtn">✈ 进入国际服 <span>→</span></button>
+              <button class="secondary" data-nav="map">看看学习地图</button>
+            </div>
+            <div class="mini-stats">
+              <div><b id="homeWords">0</b><span>已学单词</span></div>
+              <div><b id="homeXp">0</b><span>XP</span></div>
+              <div><b id="homeStreak">0</b><span>连续打卡</span></div>
+            </div>
+          </div>
+          <div class="hero-visual">
+            <div class="cloud c1"></div><div class="cloud c2"></div>
+            <div class="flight-path">· · · · · ✈</div>
+            <img src="assets/zhangxin.jpg" alt="张鑫" />
+            <div class="sticker s1">MORE ENGLISH<br>MORE ME ♡</div>
+            <div class="sticker s2">NEXT STOP<br><b>A BIGGER YOU</b></div>
+            <div class="mascot">🐰</div>
+          </div>
+          <aside class="passport-card" data-nav="passport">
+            <div class="passport-mini">GLOBAL<br>PASSPORT</div>
+            <div class="level-line"><b id="passportName">未命名</b><span id="passportLevel">Lv.1 英语新手</span></div>
+            <div class="progress"><i id="passportProgress"></i></div>
+            <div class="passport-metrics">
+              <div><b id="pWords">0</b><small>词</small></div>
+              <div><b id="pTasks">0/3</b><small>今日任务</small></div>
+              <div><b id="pStreak">0</b><small>连续打卡</small></div>
+            </div>
+          </aside>
+        </div>
+
+        <section class="module-row">
+          <button class="module" data-action="scene"><span>🗺️</span><b>场景闯关</b><small>机场 / 酒店 / 餐厅</small></button>
+          <button class="module" data-action="vocab"><span>🔤</span><b>单词训练</b><small>3000 基础高频词</small></button>
+          <button class="module" data-action="listen"><span>🎧</span><b>听力挑战</b><small>听懂世界的声音</small></button>
+          <button class="module" data-action="speak"><span>🎙️</span><b>口语开口</b><small>跟读真实表达</small></button>
+          <button class="module emergency" data-nav="survival"><span>🧰</span><b>救命英语</b><small>出国必备，随时能用</small></button>
+          <button class="module" data-nav="designs"><span>🎨</span><b>设计稿展示</b><small>查看完整视觉方案</small></button>
+          <button class="module" data-nav="achievements"><span>🏆</span><b>成就系统</b><small>一点一点，变更强</small></button>
+        </section>
+
+        <section class="world-preview">
+          <div class="section-head">
+            <div><span class="script">Explore your English world</span><h2>探索世界地图</h2><p>每一个场景，都是你更大的自己。</p></div>
+            <button class="secondary" data-nav="map">查看全部地图 →</button>
+          </div>
+          <div class="islands" id="homeIslands"></div>
+        </section>
+      </section>
+
+      <section id="screen-onboarding" class="screen">
+        <div class="center-wrap">
+          <div class="onboard-card">
+            <div class="plane-bubble">✈</div>
+            <div class="badge">FIRST LOGIN</div>
+            <h2>Hi！先创建你的英文身份吧</h2>
+            <p>从这一刻起，开启更大的你 ♡</p>
+            <label>你的英文名
+              <input id="englishNameInput" maxlength="20" autocomplete="off" placeholder="自己起一个，比如 Alex" />
+            </label>
+            <div class="name-style-title">选择一个国际服风格</div>
+            <div class="style-pills">
+              <button class="style-pill active">温柔松弛</button>
+              <button class="style-pill">自由酷飒</button>
+              <button class="style-pill">可爱活泼</button>
+              <button class="style-pill">简约高级</button>
+            </div>
+            <button class="primary big" id="createIdentity">确定，开启我的国际服 →</button>
+            <div class="hand-note">一个新的名字，<br>一个更大的自己。</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="screen-passport" class="screen">
+        <div class="page-title"><span>🛂</span><div><h2>我的国际服护照</h2><p>This is the beginning of a bigger you.</p></div></div>
+        <div class="passport-page">
+          <div class="passport-book">
+            <div class="gold">GLOBAL<br>PASSPORT</div>
+            <div class="globe">◎</div>
+            <div class="gold small">ZHANG XIN · GLOBAL SERVER</div>
+          </div>
+          <div class="identity-card">
+            <img src="assets/zhangxin.jpg" alt="" />
+            <div>
+              <small>NAME</small><h3 id="fullPassportName">未创建</h3>
+              <small>LEVEL</small><p id="fullPassportLevel">Lv.1 英语新手</p>
+              <small>FROM</small><p>China</p>
+              <small>TO</small><p>A Bigger World</p>
+              <small>SIGNATURE</small><div class="signature" id="passportSignature">—</div>
+            </div>
+          </div>
+          <div class="stamp-wall" id="stampWall"></div>
+        </div>
+      </section>
+
+      <section id="screen-map" class="screen">
+        <div class="page-title"><span>🗺️</span><div><h2>学习地图</h2><p>选择一个场景，开始你的英语冒险。</p></div></div>
+        <div class="map-board" id="mapBoard"></div>
+      </section>
+
+      <section id="screen-tasks" class="screen">
+        <div class="page-title"><span>📋</span><div><h2>每日任务</h2><p>每天 10–15 分钟，就够了。</p></div></div>
+        <div class="task-grid" id="taskGrid"></div>
+      </section>
+
+      <section id="screen-learn" class="screen">
+        <div class="learn-head">
+          <button class="back" data-nav="home">←</button>
+          <div><small id="lessonMode">单词学习</small><h2 id="lessonTitle">今日基础词</h2></div>
+          <div class="lesson-progress"><i id="lessonProgress"></i></div>
+        </div>
+        <div id="lessonArea"></div>
+      </section>
+
+      <section id="screen-review" class="screen">
+        <div class="page-title"><span>🧠</span><div><h2>错词复习</h2><p>错词不是终点，而是下一次记住的开始。</p></div></div>
+        <div class="review-list" id="reviewList"></div>
+        <button class="primary" id="startReview">开始复习 →</button>
+      </section>
+
+      <section id="screen-survival" class="screen">
+        <div class="page-title"><span>🧰</span><div><h2>救命英语</h2><p>遇到紧急情况？这里帮你。</p></div></div>
+        <div class="survival-cats" id="survivalCats"></div>
+        <div class="survival-phrases" id="survivalPhrases"></div>
+      </section>
+
+      
+      <section id="screen-designs" class="screen">
+        <div class="page-title"><span>🎨</span><div><h2>设计稿展示</h2><p>这里收纳了《张鑫国际服》的视觉方向稿与完整设计稿总览。</p></div></div>
+        <div class="design-toolbar">
+          <a class="primary" href="downloads/%E5%BC%A0%E9%91%AB%E5%9B%BD%E9%99%85%E6%9C%8D_%E8%AE%BE%E8%AE%A1%E7%A8%BF%E6%80%BB%E5%8C%85.zip" download>下载设计稿总包 ↓</a>
+          <span class="design-note">已收录首页方向、地图仪表盘、12屏故事板、16屏完整总览。</span>
+        </div>
+        <div class="design-grid" id="designGrid">
+          <a class="design-card" href="assets/designs/03_多巴胺卡通首页.png" target="_blank"><img src="assets/designs/03_多巴胺卡通首页.png" alt="多巴胺卡通首页"><div><b>多巴胺卡通首页</b><small>首页视觉方向定稿之一</small></div></a>
+          <a class="design-card" href="assets/designs/05_地图仪表盘定稿.png" target="_blank"><img src="assets/designs/05_地图仪表盘定稿.png" alt="地图仪表盘定稿"><div><b>地图仪表盘定稿</b><small>学习地图与任务面板方向</small></div></a>
+          <a class="design-card" href="assets/designs/06_12屏故事板.png" target="_blank"><img src="assets/designs/06_12屏故事板.png" alt="12屏故事板"><div><b>12屏故事板</b><small>产品流程与页面串联展示</small></div></a>
+          <a class="design-card" href="assets/designs/07_16屏完整设计稿总览.png" target="_blank"><img src="assets/designs/07_16屏完整设计稿总览.png" alt="16屏完整设计稿总览"><div><b>16屏完整设计稿总览</b><small>可直接作为项目设计稿总包核心看板</small></div></a>
+          <a class="design-card" href="assets/designs/01_商务感首页初稿.png" target="_blank"><img src="assets/designs/01_商务感首页初稿.png" alt="首页商务感初稿"><div><b>首页商务感初稿</b><small>最早的封面方向</small></div></a>
+          <a class="design-card" href="assets/designs/02_游戏感首页方向.png" target="_blank"><img src="assets/designs/02_游戏感首页方向.png" alt="游戏感首页"><div><b>游戏感首页方向</b><small>从商务风切到游戏感</small></div></a>
+          <a class="design-card" href="assets/designs/04_学习首页定稿方向.png" target="_blank"><img src="assets/designs/04_学习首页定稿方向.png" alt="学习首页方向"><div><b>学习首页方向</b><small>减少旅游海报感，强化学习感</small></div></a>
+        </div>
+      </section>
+
+      <section id="screen-achievements" class="screen">
+        <div class="page-title"><span>🏆</span><div><h2>成就系统</h2><p>收集属于你的旅行勋章。</p></div></div>
+        <div class="achieve-grid" id="achievementGrid"></div>
+      </section>
+
+      <section id="screen-profile" class="screen">
+        <div class="profile-card">
+          <img src="assets/zhangxin.jpg" alt="" />
+          <div><h2 id="profileName">未创建英文名</h2><p id="profileLevel">Lv.1 英语新手</p></div>
+          <div class="profile-stats">
+            <div><b id="profileWords">0</b><span>已学单词</span></div>
+            <div><b id="profileXp">0</b><span>XP</span></div>
+            <div><b id="profileScenes">0</b><span>通关场景</span></div>
+            <div><b id="profileStreak">0</b><span>连续打卡</span></div>
+          </div>
+          <button class="secondary" id="renameBtn">修改英文名</button>
+          <button class="danger-link" id="resetBtn">重新开始（清空本机学习记录）</button>
+        </div>
+      </section>
+    </main>
+
+    <div id="toast"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
